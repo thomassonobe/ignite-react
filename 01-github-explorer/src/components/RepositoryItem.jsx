@@ -1,13 +1,12 @@
 import React from 'react';
 
-// import { Container } from './styles';
-
-function RepositoryItem() {
+function RepositoryItem(props) {
+  const { repository } = props
   return (
     <li>
-      <strong>Unform</strong>
-      <p>Forms in React</p>
-      <a href="">
+      <strong>{repository?.name ?? "Default"}</strong>
+      <p>{repository.description}</p>
+      <a href={repository.link}>
         Acessar repositório
       </a>
     </li>
